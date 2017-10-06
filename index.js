@@ -1,22 +1,15 @@
 import $ from 'jquery'
-var pBar = document.getElementById('progressbar2');
-var currentValue = 10;
+var currentValue = 10
 
-var updateProgress = function(value) {
-  pBar.value = value;
-  pBar.getElementsByTagName('span')[0].innerHTML = Math.floor((100) * value);
-}
-
-$("#btnMuoviProgressBar").click(function(){
-    console.log('button pressed', currentValue);
-    pBar.value = currentValue;
-    pBar.getElementsByTagName('span')[0].innerHTML = currentValue;
+$('#btnMuoviProgressBar').click(function(){
+    console.log('Btn value:', currentValue)
+    $('#cntValue').text(currentValue)
+    $('#progressbar').val(currentValue);
     if (currentValue >= 100){
-        currentValue = 0;
+        currentValue = 0
     } else {
-        currentValue = currentValue + 10;
+        currentValue = currentValue + 10
     }
-    
 });
 
 
