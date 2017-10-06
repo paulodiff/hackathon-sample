@@ -1,1 +1,1 @@
-** Esempio di componente 
+## Esempio di componente progress con stile Design Italia
